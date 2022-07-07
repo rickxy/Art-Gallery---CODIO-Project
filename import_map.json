@@ -1,0 +1,18 @@
+
+{
+	"imports": {
+		"asserts": "https://deno.land/std@0.133.0/testing/asserts.ts",
+		"bcrypt": "https://deno.land/x/bcrypt@v0.3.0/mod.ts",
+		"oak": "https://deno.land/x/oak@v10.4.0/mod.ts",
+		"bb64": "https://deno.land/x/bb64@1.1.0/mod.ts",
+		"flags": "https://deno.land/std@0.133.0/flags/mod.ts",
+		"handlebars": "https://deno.land/x/handlebars@v0.8.0/mod.ts",
+		"mediaTypes": "https://deno.land/x/media_types/mod.ts",
+		"md5": "https://deno.land/std@0.133.0/hash/md5.ts",
+		"mysql": "https://deno.land/x/mysql@v2.10.2/mod.ts",
+		"statusCodes": "https://deno.land/std@0.133.0/http/http_status.ts",
+		"accounts": "./modules/accounts.js",
+		"routes": "./routes.js",
+		"db": "./modules/db.js"
+	}
+}

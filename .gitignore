@@ -1,0 +1,4 @@
+
+# Files and Directories Ignored By Git
+
+tmp/.tmp*

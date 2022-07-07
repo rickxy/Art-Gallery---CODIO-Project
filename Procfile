@@ -1,0 +1,1 @@
+web: deno task run

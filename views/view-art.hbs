@@ -1,0 +1,95 @@
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Document Review</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Mark Tyers">
+		<link href="/style.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="/main.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Document review</h1>
+				<a href="/logout">Log out</a> <a href="/newdocument">Add new</a>
+		</header>
+	<main>
+		
+
+		{{#if this.ammendmentRequested}}
+			<h6>Ammendment Requested...</h6>
+			<form action="/updatedocument" method="post" enctype="multipart/form-data">
+            <p>
+				<label for="file">Upload New Document</label><br />
+                <input type="file" name="file" id="fifle" accept="application/pdf"/>
+                <input type="text" hidden name="id" id="id" value="{{this.id}}" />
+			</p>
+			<p><input type="submit" value="Update Document"></p>
+		</form>
+		
+		{{else}}
+		<section>
+		<p><b>Title:</b> {{this.title}}</p>
+		<p><b>Status: </b>{{this.status}}</p>
+		<p><b>Summary: </b>{{this.description}}</p>
+		<p> <b>Category:</b> {{this.Category}}</p>
+		<p><b>Uploaded By:</b> {{this.UploadedAt}}</p>
+
+		<iframe src="{{host}}/uploads/{{this.document}}" height="600px" width="100%"></iframe>
+
+        <a href="{{host}}/uploads/{{this.document}}" download="{{this.title}}">Download the pdf</a>
+
+		</section>
+		{{#if this.comments}}
+			{{#each this.comments}}
+			<section id="comments">
+				<div>
+				<p><b>Comment:</b></p>
+				<span>{{this.Comment}}</span>
+				<p><b>Rating:</b></p>
+				<span>{{this.rating}} &#9733;</span>
+				</div>
+				<div>
+				<p><b>Commented By:</b></p>
+				<span>{{this.CommentedBy}}</span>
+				<p><b>Commented At:</b></p>
+				<span>{{this.Date}}</span>
+				<span>{{this.Time}}</span>
+				</div>
+				
+			</section>
+			{{/each}}
+		{{/if}}
+
+		{{#if this.allowComment}} 
+			<form action="/addComment" method="post">
+				<input type="text" name="documentId"  value="{{this.id}}" hidden>
+			<p>
+				<label for="review">Review</label>
+				<textarea cols="10" rows="10" name="review" placeholder="Review" ></textarea>
+			</p>
+			<p>
+				<label for="pass">Rating</label>
+				<input type="range" id="rating" name="rating" min="0" max="5" step="1"><span id="ratingNumber"><span>
+			</p>
+
+			<p>
+				<input type="checkbox" id="status" name="status">
+				<label for="status">Requires amendments</label>
+			</p>
+			<p><input type="submit" value="Submit"></p>
+		</form>
+		{{/if}}
+		{{/if}}
+	</main>
+		<script>
+			const slider1 = document.getElementById("rating")
+			document.getElementById('ratingNumber').innerHTML = slider1.value;
+			slider1.addEventListener("change", function() {
+				document.getElementById('ratingNumber').innerHTML = slider1.value;
+});
+		</script>
+	</body>
+</html>

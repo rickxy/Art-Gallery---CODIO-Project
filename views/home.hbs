@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Mark Tyers">
+		<link href="/style.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="/main.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Home</h1>
+				<a href="/logout">Log out</a> <a href="/newart">Add new</a>
+		</header>
+	{{!-- <main>
+		{{#if allArts }}
+		<h4>All Arts</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Uploaded At</th>
+					<th>Status</th>
+					<th>Document Link</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each allArts}}
+				<tr>
+					<td>{{this.title}}</td>
+					<td>{{this.UploadedAt}}</td>
+					<td>{{this.status}}</td>
+					<td>
+						<a href="{{host}}/uploads/{{this.document}}" target="_blank">{{this.document}}</a>
+					</td>
+					<td>
+						<a href="/documentView/{{this.id}}">View</a>
+					</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+		{{/if }}
+
+
+		{{#if allArtsByUser }}
+		<h4>My Documents</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Uploaded At</th>
+					<th>Status</th>
+					<th>Document Link</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each allDocumentsByUser}}
+				<tr>
+					<td>{{this.title}}</td>
+					<td>{{this.UploadedAt}}</td>
+					<td>{{this.status}}</td>
+				<td>
+					<a href="{{host}}/uploads/{{this.document}}" target="_blank">{{this.document}}</a>
+				</td>
+				<td>
+					<a href="/ArtView/{{this.id}}">View</a>
+				</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+		{{/if }}
+	</main> --}}
+	</body>
+</html>

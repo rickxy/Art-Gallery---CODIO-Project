@@ -1,0 +1,120 @@
+[
+  {
+    "kind": "function",
+    "name": "login",
+    "location": {
+      "filename": "file:///home/codio/workspace/modules/accounts.js",
+      "line": 17,
+      "col": 0
+    },
+    "jsDoc": {
+      "doc": "Checks user credentials.",
+      "tags": [
+        {
+          "kind": "param",
+          "name": "username",
+          "type": "string"
+        },
+        {
+          "kind": "param",
+          "name": "password",
+          "type": "string"
+        },
+        {
+          "kind": "return",
+          "type": "string",
+          "doc": "the username for the valid account"
+        }
+      ]
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "data",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": true,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "register",
+    "location": {
+      "filename": "file:///home/codio/workspace/modules/accounts.js",
+      "line": 29,
+      "col": 0
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "data",
+          "optional": false,
+          "tsType": null
+        }
+      ],
+      "returnType": null,
+      "isAsync": true,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "import",
+    "name": "compare",
+    "location": {
+      "filename": "file:///home/codio/workspace/modules/accounts.js",
+      "line": 4,
+      "col": 0
+    },
+    "importDef": {
+      "src": "https://deno.land/x/bcrypt@v0.2.4/mod.ts",
+      "imported": "compare"
+    }
+  },
+  {
+    "kind": "import",
+    "name": "genSalt",
+    "location": {
+      "filename": "file:///home/codio/workspace/modules/accounts.js",
+      "line": 4,
+      "col": 0
+    },
+    "importDef": {
+      "src": "https://deno.land/x/bcrypt@v0.2.4/mod.ts",
+      "imported": "genSalt"
+    }
+  },
+  {
+    "kind": "import",
+    "name": "hash",
+    "location": {
+      "filename": "file:///home/codio/workspace/modules/accounts.js",
+      "line": 4,
+      "col": 0
+    },
+    "importDef": {
+      "src": "https://deno.land/x/bcrypt@v0.2.4/mod.ts",
+      "imported": "hash"
+    }
+  },
+  {
+    "kind": "import",
+    "name": "db",
+    "location": {
+      "filename": "file:///home/codio/workspace/modules/accounts.js",
+      "line": 6,
+      "col": 0
+    },
+    "importDef": {
+      "src": "file:///home/codio/workspace/modules/db.js",
+      "imported": "db"
+    }
+  }
+]

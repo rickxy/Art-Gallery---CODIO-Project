@@ -1,0 +1,82 @@
+{{!-- 
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Log In</title>
+		<meta name="description" content="form to add new books">
+		<meta name="author" content="Mark Tyers">
+		<link href="{{host}}/style.css" type="text/css" rel="stylesheet" />
+		<script type="module" src="/main.js"></script>
+	</head>
+	<body>
+		<header>
+		  <a href="/" class="logo"> <i class="fas fa-book"></i> Art Gallery </a>
+		<a href="/register">Register</a>
+		</header>
+			<h2>Log In</h2> <br>
+
+		<main>
+		<form action="/login" method="post">
+		
+			<p>
+				<label for="user">Username</label>
+				<input type="text" name="username" placeholder="your username" value="{{body.user}}" autofocus>
+			</p>
+			<p>
+				<label for="pass">Password</label>
+				<input type="password" name="password" placeholder="your password" value="{{body.pass}}">
+			</p>
+			<p><input type="submit" value="Log in">
+		</form>
+		</main>
+	</body>
+</html> --}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login/Register - Art Gallery </title>
+
+    <!-- custom css file link  -->
+    <link href="{{host}}/logreg.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+    
+
+    <div class="login-page">
+        <div class="form">
+          <form class="register-form" action="/register" method="post">
+            <input type="text" placeholder="Username" name="username" value="{{body.user}}"/>
+            <input type="text" placeholder="Phone Number"/>
+            <input type="text" placeholder="Email"/>
+            <input type="password" placeholder="Password" name="password"/>
+				<input type="password" name="password2" placeholder="Confirm Password">
+            <button type="submit" value="Create">create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form>
+
+          <form class="login-form" action="/login" method="post">
+            <input type="text" placeholder="Username" name="username" value="{{body.user}}" autofocus />
+            <input type="password" placeholder="Password" name="password" value="{{body.pass}}"  />
+            <button type="submit" value="Log in" >login</button>
+
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="/logreg.js"></script>
+
+</body>
+</html>
